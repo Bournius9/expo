@@ -123,6 +123,10 @@ class FileSystemNextModule : Module() {
         directory.move(destination)
       }
 
+      Function("listAsRecords") { directory: FileSystemDirectory ->
+        directory.listAsRecords()
+      }
+
       Property("path")
         .get { directory: FileSystemDirectory -> return@get directory.asString() }
     }
